@@ -202,8 +202,7 @@
             })
     }
 
-
-// Them quoc gia vao bang 8 thang
+//them lai korea lan 2
 if ($("#events-chart").length) {
   var ctx = document.getElementById('events-chart').getContext("2d");
 
@@ -437,6 +436,10 @@ if ($("#events-chart").length) {
       gradientStrokeRed.addColorStop(1, 'rgba(254, 112, 150, 1)');
       var gradientLegendRed = 'linear-gradient(to right, rgba(255, 191, 150, 1), rgba(254, 112, 150, 1))';
 
+      var gradientStrokeYellowNew = ctx.createLinearGradient(0, 0, 0, 360);
+      gradientStrokeYellowNew.addColorStop(0, 'rgba(255, 221, 0, 1)');
+      gradientStrokeYellowNew.addColorStop(1, 'rgba(251, 176, 52, 1)');
+      var gradientLegendYellowNew = 'linear-gradient(to right, rgba(255, 221, 0, 1), rgba(251, 176, 52, 1))';
       var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -565,28 +568,36 @@ if ($("#events-chart").length) {
       gradientStrokeGreen.addColorStop(1, 'rgba(132, 217, 210, 1)');
       var gradientLegendGreen = 'linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1))';      
 
+      var gradientStrokeYellowNew = ctx.createLinearGradient(0, 0, 0, 300);
+      gradientStrokeYellowNew.addColorStop(0, 'rgba(255, 221, 0, 1)');
+      gradientStrokeYellowNew.addColorStop(1, 'rgba(251, 176, 52, 1)');
+      var gradientLegendYellowNew = 'linear-gradient(to right, rgba(255, 221, 0, 1), rgba(251, 176, 52, 1))';  
       var trafficChartData = {
         datasets: [{
-          data: [30, 30, 40],
+          data: [10, 30, 40, 20],
           backgroundColor: [
             gradientStrokeBlue,
             gradientStrokeGreen,
-            gradientStrokeRed
+            gradientStrokeRed,
+            gradientStrokeYellowNew
           ],
           hoverBackgroundColor: [
             gradientStrokeBlue,
             gradientStrokeGreen,
-            gradientStrokeRed
+            gradientStrokeRed,
+            gradientStrokeYellowNew
           ],
           borderColor: [
             gradientStrokeBlue,
             gradientStrokeGreen,
-            gradientStrokeRed
+            gradientStrokeRed,
+            gradientStrokeYellowNew
           ],
           legendColor: [
             gradientLegendBlue,
             gradientLegendGreen,
-            gradientLegendRed
+            gradientLegendRed,
+            gradientLegendYellowNew
           ]
         }],
     
@@ -595,6 +606,7 @@ if ($("#events-chart").length) {
           'Search Engines',
           'Direct Click',
           'Bookmarks Click',
+          'Khoai tay vi kim chi'
         ]
       };
       var trafficChartOptions = {
