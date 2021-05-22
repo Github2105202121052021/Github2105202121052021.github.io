@@ -356,7 +356,7 @@ if ($("#events-chart").length) {
                 fill: false,
                 borderWidth: 1,
                 fill: 'origin',
-                data: [20, 100, 300, 40, 25, 50, 15, 30]
+                data: [20, 60, 40, 40, 25, 50, 15, 30]
               }
           ]
         },
@@ -568,7 +568,7 @@ if ($("#events-chart").length) {
       gradientStrokeGreen.addColorStop(1, 'rgba(132, 217, 210, 1)');
       var gradientLegendGreen = 'linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1))';      
 
-      var gradientStrokeYellowNew = ctx.createLinearGradient(0, 0, 0, 300);
+      var gradientStrokeYellowNew = ctx.createLinearGradient(0, 0, 0, 360);
       gradientStrokeYellowNew.addColorStop(0, 'rgba(255, 221, 0, 1)');
       gradientStrokeYellowNew.addColorStop(1, 'rgba(251, 176, 52, 1)');
       var gradientLegendYellowNew = 'linear-gradient(to right, rgba(255, 221, 0, 1), rgba(251, 176, 52, 1))';  
