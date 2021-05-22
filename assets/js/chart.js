@@ -4,11 +4,12 @@ $(function () {
    * Data and config for chartjs
    */
   'use strict';
+  // Line Chart & Bar Chart
   var data = {
-    labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
+    labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
     datasets: [{
       label: '# of Votes',
-      data: [10, 19, 3, 5, 2, 3],
+      data: [100, 109, 130, 50, 200, 130],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -30,7 +31,7 @@ $(function () {
     }]
   };
   var dataDark = {
-    labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
+    labels: ["2014", "2015", "2016", "2017", "2018", "2019"],
     datasets: [{
       label: '# of Votes',
       data: [10, 19, 3, 5, 2, 3],
@@ -54,6 +55,8 @@ $(function () {
       fill: false
     }]
   };
+  // End Line Chart & Bar Chart
+  // Màu cột của Bar Chart
   var multiLineData = {
     labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
     datasets: [{
@@ -85,6 +88,7 @@ $(function () {
     }
     ]
   };
+  // End Màu cột của Bar Chart
   var options = {
     scales: {
       yAxes: [{
@@ -133,9 +137,10 @@ $(function () {
     }
 
   };
+  //Doughnut Chart
   var doughnutPieData = {
     datasets: [{
-      data: [30, 40, 30],
+      data: [30, 15, 30, 10, 15,10],
       backgroundColor: [
         'rgba(255, 99, 132, 0.5)',
         'rgba(54, 162, 235, 0.5)',
@@ -159,6 +164,9 @@ $(function () {
       'Pink',
       'Blue',
       'Yellow',
+      'Green',
+      'Purple',
+      'Orange'
     ]
   };
   var doughnutPieOptions = {
@@ -168,11 +176,12 @@ $(function () {
       animateRotate: true
     }
   };
+  //Area Chart
   var areaData = {
-    labels: ["2013", "2014", "2015", "2016", "2017"],
+    labels: ["2016", "2017", "2018", "2019", "2020","2021"],
     datasets: [{
       label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
+      data: [12, 19, 3, 5, 2, 30],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -195,7 +204,7 @@ $(function () {
   };
 
   var areaDataDark = {
-    labels: ["2013", "2014", "2015", "2016", "2017"],
+    labels: ["2014", "2015", "2016", "2017", "2021"],
     datasets: [{
       label: '# of Votes',
       data: [12, 19, 3, 5, 2, 3],
@@ -308,7 +317,7 @@ $(function () {
       }]
     }
   }
-
+//ScatterChartData
   var scatterChartData = {
     datasets: [{
       label: 'First Dataset',
@@ -452,6 +461,7 @@ $(function () {
       }]
     }
   }
+  //End ScatterChartData
   // Get context with jQuery - using jQuery's .get() method.
   if ($("#barChart").length) {
     var barChartCanvas = $("#barChart").get(0).getContext("2d");

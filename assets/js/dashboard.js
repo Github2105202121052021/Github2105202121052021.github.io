@@ -201,6 +201,85 @@
               }
             })
     }
+
+
+// Them quoc gia vao bang 8 thang
+if ($("#events-chart").length) {
+  var ctx = document.getElementById('events-chart').getContext("2d");
+
+  var gradientStrokeYellowNew = ctx.createLinearGradient(0, 0, 0, 181);
+  gradientStrokeYellowNew.addColorStop(0, 'rgba(255, 221, 0, 1)');
+  gradientStrokeYellowNew.addColorStop(1, 'rgba(251, 176, 52, 1)');
+
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: [1, 2, 3, 4, 5, 6, 7, 8],
+          datasets: [
+            {
+              label: "Domestic",
+              borderColor: gradientStrokeYellowNew,
+              backgroundColor: gradientStrokeYellowNew,
+              hoverBackgroundColor: gradientStrokeYellowNew,
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [20, 40, 15, 35, 25, 50, 30, 20]
+            },
+            {
+              label: "International",
+              borderColor: '#e9eaee',
+              backgroundColor: '#e9eaee',
+              hoverBackgroundColor: '#e9eaee',
+              pointRadius: 0,
+              fill: false,
+              borderWidth: 1,
+              fill: 'origin',
+              data: [40, 30, 20, 10, 50, 15, 35, 20]
+            }
+        ]
+      },
+      options: {
+          legend: {
+              display: false
+          },
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      display: false,
+                      min: 0,
+                      stepSize: 10
+                  },
+                  gridLines: {
+                    drawBorder: false,
+                    display: false
+                  }
+              }],
+              xAxes: [{
+                  gridLines: {
+                    display:false,
+                    drawBorder: false,
+                    color: 'rgba(0,0,0,1)',
+                    zeroLineColor: '#eeeeee'
+                  },
+                  ticks: {
+                      padding: 20,
+                      fontColor: "#9c9fa6",
+                      autoSkip: true,
+                  },
+                  barPercentage: 0.7
+              }]
+            }
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        })
+}
+// End them quoc gia vao bang 8 thang
     if ($("#visit-sale-chart").length) {
       Chart.defaults.global.legend.labels.usePointStyle = true;
       var ctx = document.getElementById('visit-sale-chart').getContext("2d");
@@ -218,7 +297,14 @@
       var gradientStrokeRed = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStrokeRed.addColorStop(0, 'rgba(255, 191, 150, 1)');
       gradientStrokeRed.addColorStop(1, 'rgba(254, 112, 150, 1)');
-      var gradientLegendRed = 'linear-gradient(to right, rgba(255, 191, 150, 1), rgba(254, 112, 150, 1))';
+      var gradientLegendRed = 'linear-gradient(to right, rgba(255, 191, 150, 1), rgba(254, 112, 150, 1))'; 
+
+      var gradientStrokeYellowNew = ctx.createLinearGradient(0, 0, 0, 360);
+      gradientStrokeYellowNew.addColorStop(0, 'rgba(255, 221, 0, 1)');
+      gradientStrokeYellowNew.addColorStop(1, 'rgba(251, 176, 52, 1)');
+      var gradientLegendYellowNew = 'linear-gradient(to right, rgba(255, 221, 0, 1), rgba(251, 176, 52, 1))';
+
+//Visit And Sales Statistics
 
       var myChart = new Chart(ctx, {
         type: 'bar',
@@ -260,6 +346,18 @@
                 borderWidth: 1,
                 fill: 'origin',
                 data: [70, 10, 30, 40, 25, 50, 15, 30]
+              },
+              {
+                label: "KOREA",
+                borderColor: gradientStrokeYellowNew,
+                backgroundColor: gradientStrokeYellowNew,
+                hoverBackgroundColor: gradientStrokeYellowNew,
+                legendColor: gradientLegendYellowNew,
+                pointRadius: 0,
+                fill: false,
+                borderWidth: 1,
+                fill: 'origin',
+                data: [20, 100, 300, 40, 25, 50, 15, 30]
               }
           ]
         },
@@ -374,6 +472,18 @@
                 backgroundColor: gradientStrokeBlue,
                 hoverBackgroundColor: gradientStrokeBlue,
                 legendColor: gradientLegendBlue,
+                pointRadius: 0,
+                fill: false,
+                borderWidth: 1,
+                fill: 'origin',
+                data: [70, 10, 30, 40, 25, 50, 15, 30]
+              },
+              {
+                label: "KOREA",
+                borderColor: gradientStrokeYellowNew,
+                backgroundColor: gradientStrokeYellowNew,
+                hoverBackgroundColor: gradientStrokeYellowNew,
+                legendColor: gradientLegendYellowNew,
                 pointRadius: 0,
                 fill: false,
                 borderWidth: 1,
